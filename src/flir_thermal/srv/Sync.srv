@@ -1,0 +1,4 @@
+string sync_mode
+uint8 index
+---
+string response

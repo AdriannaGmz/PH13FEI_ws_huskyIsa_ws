@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>flir_adk_ros</name>
+  <license>MIT</license>
+  <version>0.5.0</version>
+  <description>A ROS wrapper for the FLIR Boson ADK Thermal camera</description>
+
+  <maintainer email="bahadorm@informatik.uni-freiburg.com">Hosein @ AIS, Albert-Ludwigs-Universität Freiburg</maintainer>
+
+  <url type="repository">https://aisgit.informatik.uni-freiburg.de/vertensj/flir_adk_ros</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslint</build_depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>nodelet</depend>
+  <depend>cv_bridge</depend>
+  <depend>camera_info_manager</depend>
+  <depend>image_transport</depend>
+  <depend>sensor_msgs</depend>
+
+  <export>
+    <nodelet plugin="${prefix}/nodelet_plugins.xml"/>
+  </export>
+</package>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- pointcloud_to_laserscan node -->
+    <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
+        <remap from="cloud_in" to="/os_cloud_node/points"/>
+        
+        <rosparam>
+            target_frame: base_link # sensor_link by default. Leave disabled to output scan in pointcloud frame
+            transform_tolerance: 0.01 # Time tolerance for transform lookups. Only used if a target_frame is provided.
+            min_height: 0
+            max_height: 2.0
+            angle_min: -3.14159152          # -M_PI/2 = -1.5708
+            angle_max: 3.14159152           # M_PI/2 = -1.5708
+            angle_increment: 0.0087     # M_PI/360.0
+            scan_time: 0.3333               # default: 1.0/30.0 - The scan rate in seconds
+            range_min: 0.5
+            range_max: 15.0             # default 4m
+            use_inf: true
+            inf_epsilon: 1.0
+
+
+            # Concurrency level, affects number of pointclouds queued for processing and number of threads used
+            # 0 : Detect number of cores
+            # 1 : Single threaded (default)
+            # 2->inf : Parallelism level
+            concurrency_level: 0
+        </rosparam>
+
+    </node>
+
+</launch>

@@ -1,0 +1,19 @@
+<launch>
+    <node name="tf_husky2ousterlidar" pkg="husky_isa4_init" type="tf2_static_lidar" output="screen" required="true">
+    </node>
+
+    <node name="tf_husky2cam0l" pkg="husky_isa4_init" type="tf2_kams_cam0l" output="screen" required="true">
+    </node>
+    <node name="tf_husky2cam1r" pkg="husky_isa4_init" type="tf2_kams_cam1r" output="screen" required="true">
+    </node>
+    <node name="tf_husky2camth" pkg="husky_isa4_init" type="tf2_kams_camth" output="screen" required="true">
+    </node>
+
+
+    <node name="tf_husky2irkam" pkg="husky_isa4_init" type="tf2_kams_irkam" output="screen" required="true">
+    </node>
+    <node name="tf_husky2dotcube" pkg="husky_isa4_init" type="tf2_kams_dot" output="screen" required="true">
+    </node>
+
+
+</launch>

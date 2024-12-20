@@ -1,0 +1,50 @@
+<launch>
+
+<!-- RGB cam -->
+  <include file="$(find spinnaker_sdk_camera_driver)/launch/acquisition_multi_external_trigger.launch" />
+
+<!-- Thermal cam -->
+  <!-- <include file="$(find flir_adk_ros)/launch/sing_synch.launch" /> -->
+
+<!-- Cams rectifiers (rgb & th)-->
+  <include file="$(find spinnaker_sdk_camera_driver)/launch/publish_rectifications.launch" />
+
+<!-- TF publisher -->
+  <include file="$(find husky_isa4_init)/launch/tf_pub.launch" />
+
+
+
+<!-- Audio marker for Rviz -->
+  <!-- <node name="audioMarker_node" pkg="receiverSoftware" type="audioMarker_node" output="screen" required="true">
+  </node>
+ -->
+<!-- Wind marker for Rviz -->
+<!--  <node name="enoseMarker_node" pkg="husky_isa4_init" type="enose_marker.py" output="screen" required="true">
+  </node>
+ -->
+
+
+
+<!-- Lidar Ouster -->
+  <include file="$(find ouster_ros)/launch/ouster.launch" />
+
+<!-- pc to laser -->
+  <include file="$(find husky_isa4_nav)/launch/lidar_pointcloud_to_laserscan.launch" />
+
+
+
+  <!-- Xsens IMU, disabled bc changes husky own tf-s by now -->
+  <!-- <include file="$(find xsens_mti_driver)/launch/xsens_mti_node.launch" /> -->
+
+
+<!-- Arduino -->
+<!-- rosrun rosserial_arduino serial_node.py _port:=/dev/ttyUSB-Arduino _baud:=57600 -->
+<!--  <node pkg="rosserial_arduino" type="serial_node.py" name="arduino_serial_node" args="_port:=/dev/ttyUSB-Arduino _baud:=57600" />
+ -->
+
+<!-- Lidar marker and Rviz -->
+  <!-- <node name="lidar_marker_pub" pkg="husky_isa4_nav" type="publish_lidar_marker.py" /> -->
+  <!-- <include file="$(find husky_viz)/launch/view_robot.launch" /> -->
+
+
+</launch>

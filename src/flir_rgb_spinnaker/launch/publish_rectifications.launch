@@ -1,0 +1,16 @@
+<launch>
+
+  <node pkg="image_proc" type="image_proc" name="cam0L_rectifier" args="manager"  >
+    <env name="ROS_NAMESPACE" value="/camera_array/cam0Left"/>
+  </node>
+
+  <node pkg="image_proc" type="image_proc" name="cam1R_rectifier" args="manager"  >
+    <env name="ROS_NAMESPACE" value="/camera_array/cam1Right"/>
+  </node>
+
+  <node pkg="image_proc" type="image_proc" name="camTh_rectifier" args="manager"  >
+    <env name="ROS_NAMESPACE" value="/camThermal"/>
+  </node>
+
+
+</launch>

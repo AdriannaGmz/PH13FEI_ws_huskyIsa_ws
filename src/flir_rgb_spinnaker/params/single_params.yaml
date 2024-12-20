@@ -1,0 +1,49 @@
+cam_ids:
+- 20039932
+cam_aliases:
+- cam1Right
+master_cam: 20039932
+
+skip: 20
+delay: 1.0
+
+
+#Camera info message details
+distortion_model: plumb_bob
+#Camera: SensorHeight 1544    #SensorWidth 2064 
+image_height: 1544 #1080
+image_width: 2064 #1440
+
+
+
+# Matrices for each camera
+
+# D matrix
+distortion_coeffs: # [1x4]
+- [-0.18632970028739196, 0.05197788014677443, 0.00013398922087546675, -0.0005761540961894324]
+
+
+# K matrix  - specified as [fx  0 cx 0 fy cy 0  0  1]  [1x9]
+intrinsic_coeffs:
+# Obtained from Kalibr, by 4  (binning compensation)
+- [1009.7364648846634, 0.0, 1007.7772112233575, 0.0, 1019.656471521923, 780.1100305556956, 0.0, 0.0, 1.0]
+
+# R matrix
+rectification_coeffs:   #[1x9]
+- [1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000]
+
+# P matrix
+projection_coeffs:  # [1x12]
+# Obtained from Kalibr, by 4  (binning compensation)
+- [1009.73646488, 0.0, 1007.77721124, 0.0, 0.0, 1019.65647152, 780.11003056, 0.0,  0.0, 0.0,  1.0, 0.0]
+
+
+
+
+flip_horizontal:
+- false
+
+flip_vertical:
+- false
+
+

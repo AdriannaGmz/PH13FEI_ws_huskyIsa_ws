@@ -1,0 +1,12 @@
+<launch>
+	<arg name="NAMESPACE" default="dotcube_ns" /> 
+
+    <node name="test_publ" pkg="dotcube_msgs" type="TestPublDotcube_node" output="screen" required="true" ns="$(arg NAMESPACE)">
+    </node>
+
+    <node name="test_subsc" pkg="dotcube_msgs" type="TestSubscDotcube_node" output="screen" required="true" ns="$(arg NAMESPACE)">
+    </node>
+
+
+
+</launch>

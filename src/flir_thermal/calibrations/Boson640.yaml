@@ -1,0 +1,24 @@
+image_width: 640
+image_height: 512
+camera_name: Boson640
+# K matrix  - specified as [fx  0 cx 0 fy cy 0  0  1]
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [550.9632170336,  0.0,  324.6025401096, 0.0,  550.6681324426,  258.3196425725, 0.0,  0.0,  1.0]
+distortion_model: plumb_bob
+# D matrix
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.5323679008, 0.9568331798, 0.0044806326, -0.0018423822, -2.4239802809]
+# R matrix
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+# P matrix
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [545.9632170336, 0.0, 319.6025401096, 0.0, 0.0, 545.6681324426, 253.3196425725, 0.0, 0.0, 0.0, 1.0, 0.0]

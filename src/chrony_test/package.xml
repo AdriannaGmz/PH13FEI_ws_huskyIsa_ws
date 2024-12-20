@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>chrony_test</name>
+  <version>0.0.0</version>
+  <description>The chrony_test package</description>
+
+  <maintainer email="gomezro@todo.todo">gomezro</maintainer>
+  <license>TODO</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+
+</package>
